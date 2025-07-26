@@ -372,7 +372,7 @@ make complexity
 
 ## 🆘 支持
 
-- 📧 邮箱: support@example.com
+- 📧 邮箱: wuliang@xiangzizai.com
 - 🐛 问题反馈: [GitHub Issues](https://github.com/your-repo/issues)
 - 📖 文档: [项目文档](https://your-docs-url.com)
 
