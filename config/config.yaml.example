@@ -1,0 +1,49 @@
+# Dify 服务器配置
+dify_base_url: "http://localhost:8088/"
+dify_api_key: "dataset-ZsrVBy9Q7p01T0ZwTbM8nuvD"
+
+# 日志配置
+log_level: "INFO"
+log_file: "logs/dify-mcp-server.log"
+
+# MCP 服务器配置
+mcp_server_name: "dify-rag-mcp"
+mcp_server_version: "0.1.0"
+
+# 开发环境配置
+debug: false
+test_mode: false
+
+# HTTP 客户端配置
+http_timeout: 30
+http_retries: 3
+
+# 知识库配置
+default_indexing_technique: "high_quality"  # high_quality 或 economy
+default_permission: "only_me"  # only_me, all_team_members, partial_members
+
+# 文档处理配置
+default_process_rule:
+  mode: "automatic"  # automatic, custom, hierarchical
+  rules:
+    pre_processing_rules:
+      - id: "remove_extra_spaces"
+        enabled: true
+      - id: "remove_urls_emails"
+        enabled: true
+    segmentation:
+      separator: "\n"
+      max_tokens: 1000
+
+# 检索配置
+default_retrieval_model:
+  search_method: "semantic_search"  # semantic_search, keyword_search, hybrid_search
+  reranking_enable: false
+  top_k: 2
+  score_threshold_enabled: false
+  score_threshold: 0.0
+
+# 嵌入模型配置
+default_embedding_model:
+  provider: "zhipuai"
+  model: "embedding-3"
